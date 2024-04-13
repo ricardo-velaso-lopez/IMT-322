@@ -1,0 +1,31 @@
+-----------------------    Dobladora de metacrilato    -------------------------------
+
+
+Crear una maquina capas de poder calentar de manera controlada una pieza de metacrilato
+para despues doblarla de igual forma de manera controlada y poder crear prototipos de carcasas para futuros proyectos.
+
+
+
+
+------------- 		1er bloque	-----------------------
+
+sistema de alimentacion para el "alambre calientador" (el componente principal).
+
+
+
+---------		2do bloque 	-----------------------
+
+sistema de control de potencia para determinar el grado del "alambre caliente".
+
+
+-------------		3er bloque 	----------------------
+
+sistema sensorial para el "alambre caliente" en casos de emergencia(Reset).
+
+
+---------------		4to bloque	----------------------
+
+sistema para doblar en grados el metraquilato
+
+
+
