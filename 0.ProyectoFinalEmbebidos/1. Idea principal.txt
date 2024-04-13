@@ -16,12 +16,12 @@ sistema de alimentacion para el "alambre calientador" (el componente principal).
 ---------		2do bloque 	-----------------------
 
 sistema de control de potencia para determinar el grado del "alambre caliente".
-
+crear un modulo controlador de potencia"dimmer"
 
 -------------		3er bloque 	----------------------
 
 sistema sensorial para el "alambre caliente" en casos de emergencia(Reset).
-
+sensar la pieza principal con un modulo con termocupla.
 
 ---------------		4to bloque	----------------------
 
