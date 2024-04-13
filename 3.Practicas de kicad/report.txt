@@ -1,0 +1,109 @@
+Info: Procesando el símbolo 'D1:LED_SMD:LED_0805_2012Metric'.
+Info: Procesando el símbolo 'D2:Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal'.
+Info: Procesando el símbolo 'Q1:Package_TO_SOT_THT:TO-92_Inline'.
+Info: Procesando el símbolo 'K1:Relay_THT:Relay_SPDT_HsinDa_Y14'.
+Info: Procesando el símbolo 'R1:Resistor_SMD:R_0805_2012Metric'.
+Info: Procesando el símbolo 'R2:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Procesando el símbolo 'R3:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Procesando el símbolo 'U1:Package_DIP:DIP-4_W7.62mm'.
+Actualizados D1 campos.
+Nombre de hoja D1 actualizado a 'Raíz'.
+Archivo de hoja D1 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella D1 actualizados a 'LED* LED_SMD:* LED_THT:*'.
+Añadir red 5v.
+D1 pin 2 conectado a 5v.
+Añadir red Net-(D1-K).
+D1 pin 1 conectado a Net-(D1-K).
+Añadir D2 (huella 'Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal').
+Indicador de referencia cambiado de REF** a D2.
+Valor D2 cambiado de D_DO-41_SOD81_P10.16mm_Horizontal a 1N4007.
+Asociación de símbolos D2 actualizada de  a /eb72d398-7cd4-4ecc-ba01-1b17ddbcb0f1.
+Actualizados D2 campos.
+Nombre de hoja D2 actualizado a 'Raíz'.
+Archivo de hoja D2 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella D2 actualizados a 'D*DO?41*'.
+D2 pin 1 conectado a 5v.
+Añadir red Net-(D2-A).
+D2 pin 2 conectado a Net-(D2-A).
+Añadir K1 (huella 'Relay_THT:Relay_SPDT_HsinDa_Y14').
+Indicador de referencia cambiado de REF** a K1.
+Valor K1 cambiado de Relay_SPDT_HsinDa_Y14 a Y14x-1C-xxDS.
+Asociación de símbolos K1 actualizada de  a /a1bafaaa-050c-498f-8828-6980f1a21c6e.
+Actualizados K1 campos.
+Nombre de hoja K1 actualizado a 'Raíz'.
+Archivo de hoja K1 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella K1 actualizados a 'Relay*Y14*'.
+Añadir red COM.
+K1 pin 6 conectado a COM.
+Añadir red NO.
+K1 pin 1 conectado a NO.
+K1 pin 4 conectado a 5v.
+K1 pin 5 conectado a COM.
+K1 pin 3 conectado a Net-(D2-A).
+Añadir red NC.
+K1 pin 2 conectado a NC.
+Añadir Q1 (huella 'Package_TO_SOT_THT:TO-92_Inline').
+Indicador de referencia cambiado de REF** a Q1.
+Valor Q1 cambiado de TO-92_Inline a BC547.
+Asociación de símbolos Q1 actualizada de  a /33f45a16-e4e4-4568-9f5c-74783da39052.
+Actualizados Q1 campos.
+Nombre de hoja Q1 actualizado a 'Raíz'.
+Archivo de hoja Q1 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella Q1 actualizados a 'TO?92*'.
+Añadir red GNDREF.
+Q1 pin 3 conectado a GNDREF.
+Q1 pin 1 conectado a Net-(D2-A).
+Añadir red Net-(Q1-B).
+Q1 pin 2 conectado a Net-(Q1-B).
+Añadir D1 (huella 'LED_SMD:LED_0805_2012Metric').
+Añadir R1 (huella 'Resistor_SMD:R_0805_2012Metric').
+Indicador de referencia cambiado de REF** a R1.
+Valor R1 cambiado de R_0805_2012Metric a 1K.
+Asociación de símbolos R1 actualizada de  a /1e35b2ba-afd2-4d54-a06e-f19f433dbf2e.
+Actualizados R1 campos.
+Nombre de hoja R1 actualizado a 'Raíz'.
+Archivo de hoja R1 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella R1 actualizados a 'R_*'.
+Añadir red Net-(R1-Pad2).
+R1 pin 2 conectado a Net-(R1-Pad2).
+R1 pin 1 conectado a Net-(Q1-B).
+Indicador de referencia cambiado de REF** a D1.
+Añadir R2 (huella 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Indicador de referencia cambiado de REF** a R2.
+Valor R2 cambiado de R_0805_2012Metric_Pad1.20x1.40mm_HandSolder a 220.
+Asociación de símbolos R2 actualizada de  a /9b7e159d-b1ad-4632-80a7-399d19a4482d.
+Actualizados R2 campos.
+Nombre de hoja R2 actualizado a 'Raíz'.
+Archivo de hoja R2 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella R2 actualizados a 'R_*'.
+Añadir red Net-(R2-Pad1).
+R2 pin 1 conectado a Net-(R2-Pad1).
+Añadir red INPUT.
+R2 pin 2 conectado a INPUT.
+Valor D1 cambiado de LED_0805_2012Metric a LED.
+Añadir R3 (huella 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Indicador de referencia cambiado de REF** a R3.
+Valor R3 cambiado de R_0805_2012Metric_Pad1.20x1.40mm_HandSolder a 220.
+Asociación de símbolos R3 actualizada de  a /85d79611-8e1e-4ff5-bde7-6933ccaf9f67.
+Actualizados R3 campos.
+Nombre de hoja R3 actualizado a 'Raíz'.
+Archivo de hoja R3 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella R3 actualizados a 'R_*'.
+R3 pin 1 conectado a Net-(D1-K).
+R3 pin 2 conectado a Net-(D2-A).
+Asociación de símbolos D1 actualizada de  a /41fc7918-dd2c-4fd1-b827-5f17e3ddb412.
+Añadir U1 (huella 'Package_DIP:DIP-4_W7.62mm').
+Indicador de referencia cambiado de REF** a U1.
+Valor U1 cambiado de DIP-4_W7.62mm a PC817.
+Asociación de símbolos U1 actualizada de  a /99b07af7-9535-461d-a2aa-9db40d13a319.
+Actualizados U1 campos.
+Nombre de hoja U1 actualizado a 'Raíz'.
+Archivo de hoja U1 actualizado a '6 de abril.kicad_sch'.
+Filtros de huella U1 actualizados a 'DIP*W7.62mm*'.
+U1 pin 2 conectado a GNDREF.
+U1 pin 1 conectado a Net-(R2-Pad1).
+U1 pin 3 conectado a Net-(R1-Pad2).
+U1 pin 4 conectado a 5v.
+
+
+Info: Número de avisos: 0, errores: 0.
