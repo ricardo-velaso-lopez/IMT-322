@@ -1,0 +1,59 @@
+//realizar un codigo que simule un semaforo
+
+//declaramos las variables y el swicht case
+
+#define rojo 6
+#define amarillo 7
+#define verde 8
+
+typedef enum{
+  ROJO
+  AMARILLO
+  VERDE
+  
+}semaforo;
+
+semaforo variableEstructura = VERDE;
+  
+
+
+
+void setup() {
+  //declaramos los pines de salida
+
+  pinMode(verde, OUTPUT);
+  pinMode(amarillo, OUTPUT);
+  pinMode(rojo, OUTPUT);
+}
+
+void loop() {
+//inicializamos el swicht case
+
+switch(variableEstructura){
+  case  VERDE:
+  digitalWrite(verde, HIGH);
+      delay(2500);
+      digitalWrite(verde, LOW);
+      delay(100);
+      // cambiamos al siguiente estado
+      variableEstructura = AMARILLO;
+      break;
+
+      digitalWrite(amarillo, HIGH);
+      delay(2500);
+      digitalWrite(verde, LOW);
+      delay(100);
+      // cambiamos al siguiente estado
+      variableEstructura = Rojo;
+      break;
+
+      digitalWrite(rojo, HIGH);
+      delay(2500);
+      digitalWrite(amarillo, LOW);
+      delay(100);
+      // cambiamos al siguiente estado
+      variableEstructura = AMARILLO;
+      break;
+}
+
+}
