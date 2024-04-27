@@ -2,13 +2,13 @@
 
 //declaramos las variables y el swicht case
 
-#define rojo 6
-#define amarillo 7
-#define verde 8
+#define rojo 12
+#define amarillo 14
+#define verde 27
 
 typedef enum{
-  ROJO
-  AMARILLO
+  ROJO,
+  AMARILLO,
   VERDE
   
 }semaforo;
@@ -39,20 +39,22 @@ switch(variableEstructura){
       variableEstructura = AMARILLO;
       break;
 
-      digitalWrite(amarillo, HIGH);
+  case AMARILLO:
+  digitalWrite(amarillo, HIGH);
       delay(2500);
       digitalWrite(verde, LOW);
       delay(100);
       // cambiamos al siguiente estado
-      variableEstructura = Rojo;
+      variableEstructura = ROJO;
       break;
 
+  case ROJO:
       digitalWrite(rojo, HIGH);
       delay(2500);
       digitalWrite(amarillo, LOW);
       delay(100);
       // cambiamos al siguiente estado
-      variableEstructura = AMARILLO;
+      variableEstructura = VERDE;
       break;
 }
 
