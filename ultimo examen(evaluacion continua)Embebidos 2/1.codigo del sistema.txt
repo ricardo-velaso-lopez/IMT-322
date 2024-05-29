@@ -1,0 +1,96 @@
+import RPi.GPIO as GPIO
+import time
+
+# Declaramos los nombres de nuestros pines
+LED_ROJO = 17
+LED_AMARILLO = 27
+LED_VERDE = 22
+PULSADOR_CERRAR = 23
+PULSADOR_ABRIR = 24
+PULSADOR_BLOQUEAR = 25
+
+# Con ayuda del comando GPIO.setup declaramos los pines que mandaran y resiviran senal 
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED_ROJO, GPIO.OUT)
+GPIO.setup(LED_AMARILLO, GPIO.OUT)
+GPIO.setup(LED_VERDE, GPIO.OUT)
+GPIO.setup(PULSADOR_CERRAR, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(PULSADOR_ABRIR, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(PULSADOR_BLOQUEAR, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+# Inicialisamos nuetra swicht case
+CERRADO = "CERRADO"
+ABIERTO = "ABIERTO"
+BLOQUEADO = "BLOQUEADO"
+estado = CERRADO
+
+# Declaramos nuestra contrasena del sistema
+CONTRASEÑA_CORRECTA = "0722"
+
+# Tiempo de debounce en milisegundos
+DEBOUNCE_DELAY = 200  # 200 ms
+
+# definimos los tiempos de lectura de los pulsadores
+ultimo_tiempo_cerrar = 0
+ultimo_tiempo_abrir = 0
+ultimo_tiempo_bloquear = 0
+
+# Función para actualizar el estado de los LEDs
+def actualizar_leds():
+    GPIO.output(LED_ROJO, estado == CERRADO)
+    GPIO.output(LED_AMARILLO, estado == ABIERTO)
+    GPIO.output(LED_VERDE, estado == BLOQUEADO)
+
+# Función para manejar la entrada de la contraseña
+def ingresar_contraseña():
+    print("Ingrese la contraseña para desbloquear:")
+    contraseña = input().strip()
+    if contraseña == CONTRASEÑA_CORRECTA:
+        print("Contraseña correcta. Puerta desbloqueada.")
+        return True
+    else:
+        print("Contraseña incorrecta.")
+        return False
+
+# este bloque vendria a ser como el bucle principal del programa
+try:
+    actualizar_leds() 
+    print(f"Estado inicial: {estado}")
+
+    while True:
+        tiempo_actual = time.time() * 1000  # Obtener el tiempo actual en milisegundos
+
+        if estado != BLOQUEADO:
+            if GPIO.input(PULSADOR_CERRAR) == GPIO.LOW and (tiempo_actual - ultimo_tiempo_cerrar) > DEBOUNCE_DELAY:
+                estado = CERRADO
+                print("Puerta cerrada")
+                actualizar_leds()
+                ultimo_tiempo_cerrar = tiempo_actual
+
+            if GPIO.input(PULSADOR_ABRIR) == GPIO.LOW and (tiempo_actual - ultimo_tiempo_abrir) > DEBOUNCE_DELAY:
+                estado = ABIERTO
+                print("Puerta abierta")
+                actualizar_leds()
+                ultimo_tiempo_abrir = tiempo_actual
+
+            if GPIO.input(PULSADOR_BLOQUEAR) == GPIO.LOW and (tiempo_actual - ultimo_tiempo_bloquear) > DEBOUNCE_DELAY:
+                if estado == CERRADO:
+                    estado = BLOQUEADO
+                    print("Puerta bloqueada")
+                    actualizar_leds()
+                    ultimo_tiempo_bloquear = tiempo_actual
+                else:
+                    print("No se puede bloquear la puerta si no está cerrada")
+        else:
+            if ingresar_contraseña():
+                estado = CERRADO
+                print("Puerta cerrada")
+                actualizar_leds()
+
+        time.sleep(0.01)  # Pequeño delay para evitar sobrecargar la CPU
+
+except KeyboardInterrupt:
+    print("Saliendo...")
+finally:
+    GPIO.cleanup()
+    print("Limpieza de GPIO y salida.")
