@@ -10,7 +10,7 @@ void setup() {
   pinMode(led2,OUTPUT);
   pinMode(led3,OUTPUT);
 
-//crj no pueden subir este archivo
+//crj ahora si quiere modificarse el archivo
 }
 
 void loop() {
