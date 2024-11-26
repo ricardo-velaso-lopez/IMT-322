@@ -1,4 +1,6 @@
 
+// intentamos modificar mi repositorio desde visual studio code
+
 //declaramos los leds 
 
 #define led1 12
@@ -10,7 +12,7 @@ void setup() {
   pinMode(led2,OUTPUT);
   pinMode(led3,OUTPUT);
 
-//crj ahora si quiere modificarse el archivo
+
 }
 
 void loop() {
